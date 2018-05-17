@@ -2,5 +2,6 @@
     <string name="app_name">Gaso_</string>
     <string name="facebook_app_id">187050872111205</string>
     <string name="fb_login_protocol_scheme">fb187050872111205</string>
+    <string name="title_activity_teste">TesteActivity</string>
 
 </resources>

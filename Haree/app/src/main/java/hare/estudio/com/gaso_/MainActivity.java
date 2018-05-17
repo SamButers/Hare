@@ -120,8 +120,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private void signIn() {
         Intent signInIntent = Auth.GoogleSignInApi.getSignInIntent(mGoogleApiClient);
         startActivityForResult(signInIntent, RC_SIGN_IN);
-    }
 
+    }
     private void signOut() {
         Auth.GoogleSignInApi.signOut(mGoogleApiClient).setResultCallback(
                 new ResultCallback<Status>() {
@@ -178,6 +178,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         if (requestCode == RC_SIGN_IN) {
             GoogleSignInResult result = Auth.GoogleSignInApi.getSignInResultFromIntent(data);
             handleGPlusSignInResult(result);
+            Intent intent = new Intent(getApplicationContext(), TesteActivity.class);
+            startActivity(intent);
+
         }else{
             super.onActivityResult(requestCode, responseCode, data);
             callbackManager.onActivityResult(requestCode, responseCode, data);
