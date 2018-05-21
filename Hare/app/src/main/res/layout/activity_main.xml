@@ -5,22 +5,29 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
+
+
     <LinearLayout
-        android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingTop="56dp"
+        android:orientation="vertical"
+        android:paddingBottom="0dp"
         android:paddingLeft="24dp"
-        android:paddingRight="24dp">
+        android:paddingRight="24dp"
+        android:paddingTop="300dp">
+
         <FrameLayout
             android:id="@+id/FrameLayout1"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" >
+            android:layout_height="wrap_content">
+
+
             <com.facebook.login.widget.LoginButton
                 android:id="@+id/login_button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:visibility="gone" />
+
             <Button
                 android:id="@+id/fb"
                 android:layout_width="fill_parent"
@@ -31,16 +38,19 @@
                 android:textColor="#ffffff"
                 android:textStyle="bold" />
         </FrameLayout>
+
         <FrameLayout
             android:id="@+id/FrameLayout2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp">
+
             <com.google.android.gms.common.SignInButton
                 android:id="@+id/btn_sign_in"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="0dp" />
+
             <Button
                 android:id="@+id/google"
                 android:layout_width="fill_parent"
@@ -51,5 +61,12 @@
                 android:textColor="#ffffff"
                 android:textStyle="bold" />
         </FrameLayout>
+
+
     </LinearLayout>
+
+
+
+
+
 </ScrollView>
