@@ -190,7 +190,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         if (requestCode == RC_SIGN_IN) {
             GoogleSignInResult result = Auth.GoogleSignInApi.getSignInResultFromIntent(data);
             handleGPlusSignInResult(result);
-            Intent intent = new Intent(getApplicationContext(), TesteActivity.class);
+            Intent intent = new Intent(getApplicationContext(), hare.estudio.com.gaso_.Main2Activity.class);
             startActivity(intent);
 
         }else{
