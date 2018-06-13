@@ -7,18 +7,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
-import android.app.FragmentManager;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
-import android.view.View;
-import android.support.design.widget.NavigationView;
-import android.support.v4.view.GravityCompat;
-import android.support.v4.widget.DrawerLayout;
-import android.support.v7.app.ActionBarDrawerToggle;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
-import android.view.Menu;
-import android.view.MenuItem;
 
 import com.facebook.CallbackManager;
 import com.facebook.FacebookCallback;
@@ -46,8 +34,8 @@ import java.net.URL;
 import java.util.Arrays;
 import java.util.List;
 
-public class MainActivity extends AppCompatActivity implements View.OnClickListener, GoogleApiClient.OnConnectionFailedListener{
-    private static final String TAG = MainActivity.class.getSimpleName();
+public class LoginActivity extends AppCompatActivity implements View.OnClickListener, GoogleApiClient.OnConnectionFailedListener{
+    private static final String TAG = LoginActivity.class.getSimpleName();
     private static final int RC_SIGN_IN = 430;
     private GoogleApiClient mGoogleApiClient;
     private SignInButton btnSignIn;
@@ -58,7 +46,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_login);
         callbackManager = CallbackManager.Factory.create();
         fb = (Button) findViewById(R.id.fb);
         google = (Button) findViewById(R.id.google);
